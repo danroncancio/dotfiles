@@ -1,0 +1,10 @@
+require "conf.options"
+require "conf.keymaps"
+require "conf.plugins"
+require "conf.colorscheme"
+require "conf.cmp"
+require "conf.lsp"
+require "conf.telescope"
+require "conf.treesitter"
+require "conf.autopairs"
+
