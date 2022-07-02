@@ -12,8 +12,8 @@ local options = {
     hidden = true,
     scrolloff = 8,
     wrap = false,
-	termguicolors = true
-}
+    termguicolors = true
+}   
 
 for k, v in pairs(options) do
     vim.opt[k] = v

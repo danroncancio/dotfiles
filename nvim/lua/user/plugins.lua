@@ -29,6 +29,7 @@ if not status_ok then
 	return
 end
 
+-- Have packer use a popup window
 packer.init {
 	display = {
 		open_fn = function()
@@ -37,35 +38,52 @@ packer.init {
 	},
 }
 
--- Install plugins
+-- Plugins
 return packer.startup(function(use)
 	use "wbthomason/packer.nvim" -- Plugin manager
 
+	use "lewis6991/impatient.nvim"
+	use "kyazdani42/nvim-web-devicons"
+	use "antoinemadec/FixCursorHold.nvim"
+
 	use "neovim/nvim-lspconfig" -- LSP config
 	use "williamboman/nvim-lsp-installer"
+	use "RRethy/vim-illuminate"
 	
 	use "hrsh7th/nvim-cmp" -- Completion plugin
 	use "hrsh7th/cmp-buffer" 
 	use "hrsh7th/cmp-path" 
-	use "hrsh7th/cmp-cmdline" 
-	use "L3MON4D3/LuaSnip" -- Snippet engine
+	--use "hrsh7th/cmp-cmdline" 
 	use "hrsh7th/cmp-nvim-lsp"
 	use "hrsh7th/cmp-nvim-lua"
 	use "saadparwaiz1/cmp_luasnip"
+
+	use "L3MON4D3/LuaSnip" -- Snippet engine
 	use "rafamadriz/friendly-snippets"
 
 	use "nvim-telescope/telescope.nvim" -- Fuzzy finder
 	use "nvim-lua/plenary.nvim"
 	use "nvim-lua/popup.nvim"
 	use "nvim-telescope/telescope-media-files.nvim"
+	use "ahmedkhalf/project.nvim"
+	use { "kyazdani42/nvim-tree.lua" }
 
 	use "windwp/nvim-autopairs"
+	use "numToStr/Comment.nvim" -- Better comments
 
 	use {
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	}
+	use "windwp/nvim-ts-autotag"
+	
+	use "lewis6991/gitsigns.nvim" -- Git
 
-	use "morhetz/gruvbox" -- Colorscheme
+	--use "morhetz/gruvbox" -- Colorscheme
+	use "folke/tokyonight.nvim"
+
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
 end)
 
