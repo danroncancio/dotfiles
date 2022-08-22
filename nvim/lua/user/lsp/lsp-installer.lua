@@ -10,7 +10,9 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"volar",
-	"tailwindcss"
+	"tailwindcss",
+	"rust_analyzer",
+	"gopls"
 }
 
 local settings = {

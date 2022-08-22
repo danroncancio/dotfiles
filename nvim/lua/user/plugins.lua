@@ -80,7 +80,9 @@ return packer.startup(function(use)
 	use "lewis6991/gitsigns.nvim" -- Git
 
 	--use "morhetz/gruvbox" -- Colorscheme
-	use "folke/tokyonight.nvim"
+	--use "folke/tokyonight.nvim"
+	--use "shaunsingh/solarized.nvim"
+	use 'navarasu/onedark.nvim'
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

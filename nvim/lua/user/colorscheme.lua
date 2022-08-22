@@ -1,10 +1,16 @@
-local colorscheme = "tokyonight"
+--local colorscheme = "onedark"
+--
+--vim.g.tokyonight_style = "storm"
+--
+--local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+--if not status_ok then
+--	vim.notify("colorscheme " .. colorscheme .. " not found!")
+--	return
+--end
 
-vim.g.tokyonight_style = "storm"
+require('onedark').setup {
+	style = 'deep'
+};
+require('onedark').load();
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-	vim.notify("colorscheme " .. colorscheme .. " not found!")
-	return
-end
 
